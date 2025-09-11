@@ -1,0 +1,25 @@
+name: Update Flake Lock
+on:
+  schedule:
+    - cron: '0 4 * * 1' # every Monday at 4am
+  workflow_dispatch:
+
+jobs:
+  update-lock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+
+      - name: Update flake inputs
+        run: nix flake update
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add flake.lock
+          git diff --quiet || git commit -m "update: flake.lock"
+          git push
