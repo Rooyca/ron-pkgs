@@ -1,7 +1,7 @@
 name: Update Flake Lock
 on:
-  schedule:
-    - cron: '0 4 * * 1' # every Monday at 4am
+  # schedule:
+  #   - cron: '0 4 * * 1' # every Monday at 4am
   workflow_dispatch:
 
 jobs:
