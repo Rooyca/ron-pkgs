@@ -5,16 +5,23 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     barli.url = "github:rooyca/barli";
+    barli.inputs.nixpkgs.follows = "nixpkgs"; 
     minipm.url = "github:rooyca/minipm";
+    minipm.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, barli, minipm }:
+  outputs = { self, nixpkgs, barli, minipm, ... }:
     let
-      pkgs = import nixpkgs { system = "x86_64-linux"; };
+      forAllSystems = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed;
     in {
-      packages.x86_64-linux = {
-        barli = barli.packages.${pkgs.system}.default;
-        minipm = minipm.packages.${pkgs.system}.default;
-      };
+      packages = forAllSystems (system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in {
+          barli = barli.packages.${system}.default;
+          minipm = minipm.packages.${system}.default;
+        }
+      );
     };
 }
+
