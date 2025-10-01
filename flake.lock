@@ -7,16 +7,36 @@
         ]
       },
       "locked": {
-        "lastModified": 1759283839,
-        "narHash": "sha256-J5zGNimVqflPflGMEGJ7mBwllu5dZ1CEACPVdnj4vfY=",
+        "lastModified": 1759347245,
+        "narHash": "sha256-1XWV8EQkvQwyg9AJ2wkLj33S7EDCO1mkMYZFG8VGmkM=",
         "owner": "rooyca",
         "repo": "barli-c",
-        "rev": "8707e7ed1575a037d488b2ba45a3ace7de3eb1cf",
+        "rev": "576472363f05e9eb979b67454a56b31a51ceb124",
         "type": "github"
       },
       "original": {
         "owner": "rooyca",
         "repo": "barli-c",
+        "type": "github"
+      }
+    },
+    "barli-rust": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757629026,
+        "narHash": "sha256-Kn145P5c73DF3+M9kwYFO/pY+xa8r392T+0UzORzutc=",
+        "owner": "rooyca",
+        "repo": "barli",
+        "rev": "20046e04962ab239e52673eee909f990e1f474f2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rooyca",
+        "repo": "barli",
         "type": "github"
       }
     },
@@ -42,11 +62,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1759070547,
-        "narHash": "sha256-JVZl8NaVRYb0+381nl7LvPE+A774/dRpif01FKLrYFQ=",
+        "lastModified": 1759133924,
+        "narHash": "sha256-eegjF6fo080481S/ZHyDENjeGG1ZgW2v86O9UZQxLJ8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "647e5c14cbd5067f44ac86b74f014962df460840",
+        "rev": "9547cfd27b5158eb612a6812dfc5c7b3d118b996",
         "type": "github"
       },
       "original": {
@@ -59,6 +79,7 @@
     "root": {
       "inputs": {
         "barli": "barli",
+        "barli-rust": "barli-rust",
         "minipm": "minipm",
         "nixpkgs": "nixpkgs"
       }
