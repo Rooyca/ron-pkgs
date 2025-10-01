@@ -1,0 +1,69 @@
+{
+  "nodes": {
+    "barli": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759283839,
+        "narHash": "sha256-J5zGNimVqflPflGMEGJ7mBwllu5dZ1CEACPVdnj4vfY=",
+        "owner": "rooyca",
+        "repo": "barli-c",
+        "rev": "8707e7ed1575a037d488b2ba45a3ace7de3eb1cf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rooyca",
+        "repo": "barli-c",
+        "type": "github"
+      }
+    },
+    "minipm": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757617243,
+        "narHash": "sha256-q5bO4nK5CgDCNFrxLuKO8QR8GsgQcUtF/Qs80F8khhE=",
+        "owner": "rooyca",
+        "repo": "minipm",
+        "rev": "100f92475fb3455c7749d133a8bee6d7ad351932",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rooyca",
+        "repo": "minipm",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1759070547,
+        "narHash": "sha256-JVZl8NaVRYb0+381nl7LvPE+A774/dRpif01FKLrYFQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "647e5c14cbd5067f44ac86b74f014962df460840",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "barli": "barli",
+        "minipm": "minipm",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
